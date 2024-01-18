@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+  cursor: context-menu;
+}
+
+body {
+
+  background: linear-gradient(to right, #ffffff, #000000);
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: linear-gradient(to right, #515151, #000000) ; */
+  box-shadow: 0px 10px 90px 0px rgb(25, 135, 139);
+  padding: 0.2%;
+  border-radius: 30rem;
+  background-blend-mode: screen;
+  opacity: 100%;
+  /*100 - 70%*/
+}
+
+.logo-container {
+  height: 3rem;
+  width: 12rem;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.logo {
+  height: 3rem;
+  width: 3rem;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo-txt img {
+  height: 48px;
+  width: 143px;
+}
+
+.logo img {
+  height: 100%;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  text-shadow: 0 0 3px #000000;
+  color: #00fbff;
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  transition: all 0.3s ease-in-out;
+  border-radius: 25px;
+  position: relative;
+}
+
+.navbar a:before,
+.navbar a:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+
+/* .navbar a:hover {
+  color: #00fffc;
+  cursor: pointer;
+} */
+
+.navbar a::before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #00fffc 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #00fffc 20%, transparent 30%),
+    radial-gradient(circle, #00fffc 20%, transparent 20%),
+    radial-gradient(circle, #00fffc 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #00fffc 15%, transparent 20%),
+    radial-gradient(circle, #00fffc 20%, transparent 20%),
+    radial-gradient(circle, #00fffc 20%, transparent 20%),
+    radial-gradient(circle, #00fffc 20%, transparent 20%),
+    radial-gradient(circle, #00fffc 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%,
+    15% 15%, 10% 10%, 18% 18%;
+}
+
+.navbar a:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #00fffc 20%, transparent 20%),
+    radial-gradient(circle, #00fffc 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #00fffc 15%, transparent 20%),
+    radial-gradient(circle, #00fffc 20%, transparent 20%),
+    radial-gradient(circle, #00fffc 20%, transparent 20%),
+    radial-gradient(circle, #00fffc 20%, transparent 20%),
+    radial-gradient(circle, #00fffc 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%,
+    20% 20%;
+}
+
+.navbar a:hover {
+  transform: scale(0.9);
+  color: #00fffc;
+  box-shadow: 0 2px 25px rgba(0, 217, 255, 0.2);
+}
+
+.navbar a.bubble:before {
+  display: block;
+  animation: topBubbles 0.75s forwards;
+}
+
+.navbar a.bubble:after {
+  display: block;
+  animation: bottomBubbles 0.75s forwards;
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position:
+      5% 90%, 10% 90%, 10% 90%,
+      15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position:
+      0% 80%, 0% 20%, 10% 40%,
+      20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position:
+      0% 70%, 0% 10%, 10% 30%,
+      20% -10%, 30% 20%, 22% 40%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+}
+
+@keyframes bottomBubbles {
+  0% {
+    background-position:
+      5% -10%, 10% -10%, 10% -10%,
+      15% -10%, 25% -10%, 25% -10%,
+      40% -10%, 55% -10%, 70% -10%;
+  }
+
+  50% {
+    background-position:
+      0% -20%, 0% -20%, 10% -20%,
+      20% -20%, 30% -20%, 22% -20%,
+      50% -20%, 65% -20%, 90% -20%;
+  }
+
+  100% {
+    background-position:
+      0% -30%, 0% -30%, 10% -30%,
+      20% -30%, 30% -30%, 22% -30%,
+      50% -30%, 65% -30%, 90% -30%;
+  }
+}
+
+.first-content {
+  display: flex;
+  margin: 3rem 4rem 3rem 3rem;
+  justify-content: space-around;
+}
+
+.first-img{
+  padding: 80px;
+}
+
+.first-img img {
+  box-shadow: 0px 10px 20px 0px rgb(25,135,139);
+  justify-content: center;
+  border-radius: 18px;
+  align-items: end;
+  object-fit: cover;
+  height: 470px;
+}
+
+.first-para {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: 500px;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+#first-heading {
+  font-family: Georgia, 'Times New Roman', Times, serif, serif;
+  font-size: 3.5em;
+  text-decoration: solid;
+  text-shadow: 0 0 8px #000000;
+  color: #00f1ff;
+}
+
+#first-para {
+  font-size: 1.1rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #02403f;
+}

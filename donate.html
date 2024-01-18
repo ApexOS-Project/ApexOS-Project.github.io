@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="donate.css">
+    <title>Donate</title>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo-container">
+      <div class="logo"><img src="logo.jpeg.jpg" alt="Logo"></div>
+      <div class="logo-txt"><img src="Logo-txt.png" alt="APEX OS"></div>
+    </div>
+    
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="download.html">Download</a>
+            <a href="team.html">Team</a>
+            <a href="changelog.html">Changelogs</a>
+            <a href="docs.html">Docs</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+    
+        </div>
+    Donate
+    
+
+    <script>
+        const navbarLinks = document.querySelectorAll('.navbar a')
+ 
+        navbarLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            link.classList.add('bubble')
+ 
+            link.addEventListener('transitionend', () => {
+              link.classList.remove('bubble')
+            })
+          })
+        })
+     </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Apex OS</title>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="logo-container">
+      <div class="logo"><img src="logo.jpeg.jpg" alt="Logo"></div>
+      <div class="logo-txt"><img src="Logo-txt.png" alt="APEX OS"></div>
+    </div>
+
+    <div class="nav-links">
+      <a href="gallery.html">Gallery</a>
+      <a href="download.html">Download</a>
+      <a href="donate.html">Donate</a>
+      <a href="team.html">Team</a>
+      <a href="changelog.html">Changelogs</a>
+      <a href="docs.html">Docs</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+
+  </div>
+
+  <div class="first-content">
+    <div class="first-para">
+      <h2 id="first-heading">
+        Experience the power of ApexOS 
+      </h2>
+      <p id="first-para">
+        Elevate the performance, reliability, and customization options of your Android device. Unleash a new level of control and personalization for an unmatched user experience on ApexOS.
+      </p>
+
+    </div>
+    <div class="first-img">
+      <img src="apex-os.png" alt="">
+    </div>
+  </div>
+
+
+
+  <script>
+    const navbarLinks = document.querySelectorAll('.navbar a')
+
+    navbarLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        link.classList.add('bubble')
+
+        setTimeout(() => {
+          window.location.href = link.getAttribute('href');
+        }, 3000);
+
+        link.addEventListener('transitionend', () => {
+          link.classList.remove('bubble')
+        })
+      })
+    })
+  </script>
+</body>
+
+</html>
